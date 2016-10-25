@@ -1,0 +1,97 @@
+.footer {
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+39,000000+100&0+0,0.58+31,1+100 */
+	background: -moz-linear-gradient(top,  rgba(0,0,0,0) 0%, rgba(0,0,0,0.58) 31%, rgba(0,0,0,0.63) 39%, rgba(0,0,0,1) 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.58) 31%,rgba(0,0,0,0.63) 39%,rgba(0,0,0,1) 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.58) 31%,rgba(0,0,0,0.63) 39%,rgba(0,0,0,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
+
+	&.white {
+		.footer-lvl-1 h2 {
+			color: #000;
+		}
+	}
+	padding-top: 30px;
+	position:relative;
+	z-index:1;
+	&-lvl {
+		&-1 {
+			font-family: times new roman;
+			font-size: 18px;
+			padding-left: 50px;
+			padding-right: 50px;
+			.text-danger {
+				color: #ff2730;
+			}
+			h4 {
+				.rf-normal;
+				font-weight: 600;
+				color: #fff;
+				  line-height: .95;
+				  font-size: 36px;
+				  margin-bottom: 80px;
+			}
+		}
+		&-2 {
+			padding-left: 50px;
+			padding-right: 50px;
+			hr {
+				border-color: #4a4a4a;
+			}
+			p {
+				font-size: 11px;
+				color: #6c6964;
+			}
+			h3 {
+				color: rgba(255,255,255,.5);
+				font-size: 15px;
+				margin-top: 0;
+				margin-bottom: 30px;
+				text-transform: uppercase;
+				font-weight: 400;
+				font-family: Arial;
+			}
+			ul {
+				list-style-type: none;
+				padding-left: 0;
+				margin-bottom: 50px;
+				li {
+					margin-bottom: 8px;
+				}
+				a {
+					color: rgba(255,255,255,.5);
+					&:hover,&:focus {
+						color: rgba(255,255,255,.5);
+					}
+				}
+			}
+		}
+	}
+	.social {
+		p {
+			font-size: 15px;
+			margin-bottom: 30px;
+			color: rgba(255,255,255,.5);
+		}
+		ul {
+			padding: 0;
+			//padding-top: 143px;
+			margin: 0;
+			list-style-type: none;
+			display: flex;
+			flex-direction: column;
+			li {
+				&:nth-child(1) {
+					margin-bottom: 30px;
+					a {
+						margin-right: 15px;
+					}
+				}
+				&:nth-child(2) {
+					a {
+						margin-right: 16px;
+					}
+				}
+			}
+		}
+	}
+}

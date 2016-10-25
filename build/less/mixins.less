@@ -1,0 +1,98 @@
+// Mixins
+// Utilities
+@import "mixins/opacity.less";
+@import "mixins/image.less";
+@import "mixins/resize.less";
+@import "mixins/size.less";
+
+// Skins
+@import "mixins/gradients.less";
+
+// Animations
+@import "mixins/animation.less";
+
+// Layout
+@import "mixins/clearfix.less";
+@import "mixins/center-block.less";
+@import "mixins/sticky-page.less";
+
+// Appearance
+@import "mixins/table-appearance.less";
+@import "mixins/background-variant.less";
+@import "mixins/border-radius.less";
+@import "mixins/margin.less";
+@import "mixins/padding.less";
+
+//Units
+body {
+  &.modal-open {
+    padding-right: 0 !important;
+    overflow: auto !important;
+  }
+}
+@transition: .3s ease all;
+@dark: #373737;
+.full-width {
+	width: 100%;
+}
+.btn.disabled {
+	pointer-events: none !Important;
+}
+.cd-top {
+  z-index: 10;
+  display: inline-block;
+  height: 40px;
+  width: 110px;
+  position: fixed;
+  top: 50%;
+margin-top: 80px;
+  right: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  /* image replacement properties */
+  overflow: hidden;
+  color: #fff;
+  white-space: nowrap;
+  background: rgba(232, 98, 86, 0.8) url(../img/cd-top-arrow.svg) no-repeat right 15px center;
+      padding: 10px 15px;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: opacity .3s 0s, visibility 0s .3s;
+  -moz-transition: opacity .3s 0s, visibility 0s .3s;
+  transition: opacity .3s 0s, visibility 0s .3s;
+  color: #fff !important;
+  text-decoration: none !important;
+}
+.cd-top.cd-is-visible, .cd-top.cd-fade-out, .no-touch .cd-top:hover {
+  -webkit-transition: opacity .3s 0s, visibility 0s 0s;
+  -moz-transition: opacity .3s 0s, visibility 0s 0s;
+  transition: opacity .3s 0s, visibility 0s 0s;
+  color: #fff;
+  text-decoration: none;
+}
+.cd-top.cd-is-visible, .cd-top.cd-fade-out, .no-touch .cd-top:focus {
+  -webkit-transition: opacity .3s 0s, visibility 0s 0s;
+  -moz-transition: opacity .3s 0s, visibility 0s 0s;
+  transition: opacity .3s 0s, visibility 0s 0s;
+  color: #fff;
+  text-decoration: none;
+}
+.cd-top.cd-is-visible {
+  /* the button becomes visible */
+  visibility: visible;
+  opacity: 1;
+  color: #fff;
+  text-decoration: none;
+}
+
+.no-touch .cd-top:hover {
+  background-color: #e86256;
+  opacity: 1;
+  color: #fff;
+  text-decoration: none;
+}
+.no-touch .cd-top:focus {
+  background-color: #e86256;
+  color: #fff;
+  text-decoration: none;
+  opacity: 1;
+}
