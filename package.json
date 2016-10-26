@@ -19,10 +19,16 @@
     "gulp-minify-css": "^0.5.1",
     "gulp-notify": "^2.2.0",
     "gulp-plumber": "^0.6.6",
+    "gulp-postcss": "^6.2.0",
     "gulp-rename": "^1.2.0",
+    "gulp-sass": "^2.3.2",
+    "gulp-sourcemaps": "^2.2.0",
     "gulp-uglify": "^1.1.0",
     "gulp-watch": "^4.1.1",
-    "imagemin-pngquant": "^4.0.0"
+    "imagemin-pngquant": "^4.0.0",
+    "postcss-reporter": "^1.4.1",
+    "postcss-scss": "^0.3.1",
+    "stylelint": "^7.5.0"
   },
   "dependencies": {
     "imagemin-pngquant": "^4.0.0"
