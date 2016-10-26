@@ -126,7 +126,7 @@ gulp.task('watch', function () {
 	gulp.watch(['*.html'], ['html']);
 	gulp.watch(['build/js/my/*.js'], ['scripts']);
 	gulp.watch(['build/sass/*.scss'], ['scss-lint', 'sass']);
-	gulp.watch(['build/less/*.less'], ['styles']);
+	// gulp.watch(['build/less/*.less'], ['styles']);
 	gulp.watch(['build/img/*'], ['img']);
 });
 
