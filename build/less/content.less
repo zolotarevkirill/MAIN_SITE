@@ -1,6 +1,31 @@
 .insetVideo video {
 	height: 620px !important; 
 }
+
+/*List with arrows of red corporate color*/
+ul.listWithRedArrows {
+	margin-left: 0;
+	padding-left: 35px;
+	list-style-type: none;
+	font-size: inherit;
+	li {
+		position: relative;
+		padding-left: 18px;
+		&:after {
+			content: '►';
+			color: #e0051c;
+			position: absolute;
+			left: 0;
+			top: 0;
+			top: 2px;
+			font-size: 13px;
+		}
+		p {
+			margin-bottom: 0;
+		}
+	}
+}
+
 .btn-call-from-buro {
 	font-size: 16px;
 	font-weight: 700;

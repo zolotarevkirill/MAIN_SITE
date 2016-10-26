@@ -57,21 +57,21 @@ gulp.task('sass', function() {
 
 });
 
-// //less
-// gulp.task('styles', function() {
-// 	return gulp.src('build/less/style.less')
-// 	.pipe(less())
-// 	.pipe(autoprefixer('last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1', 'ios 6', 'android 4'))
-// 	.pipe(rename({
-// 		suffix: '.min'
-// 	}))
-// 	.pipe(minifycss())
-// 	.pipe(gulp.dest('assets/css'))
-// 	.pipe(connect.reload())
-// 	.pipe(notify({
-// 		message: 'css!'
-// 	}));
-// });
+//less
+gulp.task('styles', function() {
+	return gulp.src('build/less/style.less')
+	.pipe(less())
+	.pipe(autoprefixer('last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1', 'ios 6', 'android 4'))
+	.pipe(rename({
+		suffix: '.min'
+	}))
+	.pipe(minifycss())
+	.pipe(gulp.dest('assets/css'))
+	.pipe(connect.reload())
+	.pipe(notify({
+		message: 'css!'
+	}));
+});
 
 gulp.task('img', function () {
 	return gulp.src('build/img/*')
@@ -126,7 +126,7 @@ gulp.task('watch', function () {
 	gulp.watch(['*.html'], ['html']);
 	gulp.watch(['build/js/my/*.js'], ['scripts']);
 	gulp.watch(['build/sass/*.scss'], ['scss-lint', 'sass']);
-	// gulp.watch(['build/less/*.less'], ['styles']);
+	gulp.watch(['build/less/*.less'], ['styles']);
 	gulp.watch(['build/img/*'], ['img']);
 });
 
