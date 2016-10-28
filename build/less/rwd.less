@@ -510,13 +510,21 @@
 
 /* Landscape phones and portrait tablets */
 @media (max-width: 767px) {
+
+	/* FAQ page */
 	body .content .item-review .inner:after, 
 	body .content .item-review .inner:before {
 		content: none;
-	}
+	}/* /FAQ page*/
+	/* Expert opinion page */
+	body .content .flex-reversed.expert {
+		margin-left: 0;
+		margin-right: 0;
+	}/* /Expert opinion page */
+	/* Header collapsed menu */
 	body .header .navbar-toggle {
 		display: block !important;
-	}
+	}/* /Header collapsed menu */
 	body .journal-article-content img {
 		width: 100%;
 	}
