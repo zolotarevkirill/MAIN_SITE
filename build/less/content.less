@@ -1,3 +1,8 @@
+/* Hide 1C-Bitrix Ad Button */
+.bx-composite-btn-fixed {
+	display: none;
+}
+
 .insetVideo video {
 	height: 620px !important; 
 }
@@ -865,6 +870,7 @@ ul.listWithRedArrows {
 			left: -30px;
 			margin-top: -30px;
 			.size(@width: 60px;@height: 60px);
+			padding: 30px; 
 			background: url(../img/slider_content_nav.png) center left no-repeat;
 		}
 		.my-arrow-right {
@@ -874,6 +880,7 @@ ul.listWithRedArrows {
 			right: -25px;
 			margin-top: -30px;
 			.size(@width: 60px;@height: 60px);
+			padding: 30px; 
 			background: url(../img/slider_content_nav.png) center right no-repeat;
 		}
 	}
@@ -1830,21 +1837,21 @@ ul.listWithRedArrows {
 				// 		color:red;
 				// 	}
 				// }
-				p.price-line-through {
-					position: relative;
-					width: 90px;
-					&:after {
-						content: '';
-						width: 90%;
-						height: 1px;
-						background: red;
-						position: absolute;
-						left: 5%;
-						top: 50%;
-						magin-top:-1px;
-						transform: rotateZ(-8deg);
-					}
-				}
+				// p.price-line-through {
+				// 	position: relative;
+				// 	width: 90px;
+				// 	&:after {
+				// 		content: '';
+				// 		width: 90%;
+				// 		height: 1px;
+				// 		background: red;
+				// 		position: absolute;
+				// 		left: 5%;
+				// 		top: 50%;
+				// 		magin-top:-1px;
+				// 		transform: rotateZ(-8deg);
+				// 	}
+				// }
 				// &:nth-child(4) {
 				// 	p {
 				// 		position: relative;
@@ -1877,6 +1884,7 @@ ul.listWithRedArrows {
 				}
 				th {
 					border: none;
+					min-width: 100px;
 				}
 			}
 			p {
@@ -3885,7 +3893,7 @@ ul.listWithRedArrows {
 }
 .my-tabpanel.design-2 .nav-tabs li a,
 .my-tabpanel.design-2 .nav-tabs li.active a {
-	height: 100%;
+	/* height: 100%; */
 }
 /*
 <=========== journal START =========>
@@ -4325,3 +4333,192 @@ ul.listWithRedArrows {
 	<=========== warranty END =========>
 	*/
 
+<<<<<<< HEAD
+=======
+/* New catalog */
+.focus-out-bg {
+	display: block;
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: rgba(0, 0, 0, 0.5);
+	z-index: 2;
+}
+.new-catalog {
+	display: table;
+	width: 100%;
+	height: auto;
+	padding: 0 !important;
+	margin: 0 !important;
+	background: none;
+	z-index: 10;
+	&__filters {
+		display: table-cell;
+		float: none;
+		height: 100%;
+		background: #eee;
+		padding: 20px;
+		padding-top: 0;
+		vertical-align: top;
+		&::after {
+			content: '';
+		}
+		& .open-filter-content, .close-filter-content {
+			display: none;
+			font-size: 1.5em;
+			color: #333;
+			text-decoration: none;
+			position: absolute;
+			right: 20px;
+			top: 10px;
+			&:hover {
+				text-decoration: none;
+				color: inherit;
+			}
+		}
+	}
+	&__category {
+		padding: 0;
+		margin-left: 5px;
+		margin-bottom: -10px;
+		width: 100%;
+		& .row {
+			margin: 0;
+		}
+		& .category-item {
+			padding: 0 5px 10px;
+			height: 35em;
+			&-wrapper {
+				height: 100%;
+				background: #fff;
+			}
+			&_img {
+				position: relative;
+				height: auto;
+				overflow: hidden;
+				& img {
+					position: relative;
+					height: 60%;
+				}
+			}
+			&_desc {
+				height: 40%;
+				padding: 20px;
+				display: flex;
+				flex-direction: column;
+				justify-content: space-between;
+				overflow: hidden;
+				text-overflow: ellipsis;
+				& h4 {
+					margin: 0;
+					margin-bottom: 18px;
+					font-family: Reforma,Arial,sans-serif;
+					font-weight: 600;
+				}
+				& p {
+					font-size: 14px;
+					margin: 0;
+					line-height: 1;
+				}
+			}
+		}
+	}
+	&__section {
+		padding: 0;
+		margin-left: 5px;
+		margin-bottom: -10px;
+		width: 100%;
+		& .row {
+			margin: 0;
+		}
+		& .section-item {
+			padding: 0 5px 10px;
+			height: 35em;
+			&-wrapper {
+				height: 100%;
+				background: #fff;
+			}
+			&_img {
+				position: relative;
+				width: 100%; 
+				height: auto;
+				max-height: 60%;
+				overflow: hidden;
+				& .item {
+					display: table;
+				}
+				& img {
+					display: block;
+					position: relative;
+					 width: 100%;
+					height: 100%; 
+				}
+			}
+			& .my-arrow-left {
+				display: table;
+				position: absolute;
+				top: 50%;
+				left: -30px;
+				margin-top: -30px;
+				width: 60px;
+				height: 60px;
+				padding: 30px;
+				background: url(../img/slider_content_nav.png) center left no-repeat;
+			}
+			& .my-arrow-right {
+				display: table;
+				position: absolute;
+				top: 50%;
+				right: -25px;
+				margin-top: -30px;
+				width: 60px;
+				height: 60px;
+				padding: 30px;
+				background: url(../img/slider_content_nav.png) center right no-repeat;
+			}
+			&_desc {
+				height: 43%;
+				padding: 20px;
+				& .row {
+					height: 100%;
+					display: flex;
+					flex-flow: row wrap;
+					align-content: space-between;
+					& [class*='col-'] {
+						padding: 0;
+					}
+				}
+				& h4 {
+					width: 100%;
+					margin: 0;
+					font-family: Reforma,Arial,sans-serif;
+					font-weight: 600;
+				}
+				& hr {
+					width: 100%;
+					margin: 0;
+					border-top: 1px dashed #333;
+				}
+				& span {
+					font-size: 16px;
+					margin: 0;
+					line-height: 1;
+				}
+				& a {
+					font-size: 12px;
+					text-transform: uppercase;
+				}
+				& .old-price {
+					text-decoration: line-through;
+				}
+				& .new-price {
+					font-size: 18px;
+					word-wrap: normal;
+				}
+			}
+		}
+	}
+}
+>>>>>>> 75f8a8c... RWD overall refactoring

@@ -552,24 +552,41 @@ $(document).ready(function () {
     var owlBack = $('[data-item="slider-back-side"]');
     var owlMain = $('[data-item="slider-item"]');
     var owlCatalog = $('[data-item="slider-item-catalog"]');
+
+    var owlNewCatalog = $('[data-item="slider-item-new-catalog"]');
     that.css('margin-top', win);
 
-    owlCatalog.owlCarousel({
-        loop: true,
+    owlNewCatalog.owlCarousel({
+        // responsive: {
+        //     0: {
+        //         autoWidth: true
+        //     },
+        //     1999: {
+        //         autoWidth: false
+        //     }
+        // },
+        stagePadding: 0,
+        loop: false,
         margin: 0,
         nav: true,
         dots: false,
         items: 1,
+        autoHeight: true,
         autoplay: false,
-        autoHeight: false,
-        autoHeightClass: 'owl-height',
         navText: [
         "<i class='my-arrow-left'></i>",
         "<i class='my-arrow-right'></i>"
-        ],
-        dots: true,
+        ]
+        //onResized: isAdaptive
     });
-    /*owlCatalog.on('resize', owlCarousel(){
+
+    // function isAdaptive() {
+    //     console.log(1);
+    //     owlNewCatalog.trigger('refresh.owl.carousel');
+    // }
+
+
+    owlCatalog.owlCarousel({
         loop: true,
         margin: 0,
         nav: true,
@@ -579,11 +596,13 @@ $(document).ready(function () {
         autoHeight: true,
         autoHeightClass: 'owl-height',
         navText: [
-            "<i class='my-arrow-left'></i>",
-            "<i class='my-arrow-right'></i>"
+        "<i class='my-arrow-left'></i>",
+        "<i class='my-arrow-right'></i>"
         ],
         dots: true,
-    });*/
+    });
+  
+
     owlCatalog.on('changed.owl.carousel', function (e) {
         var carrentSlide = e.page.index;
         $('.left-side-trigger').removeClass('active');
