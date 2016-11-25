@@ -506,6 +506,15 @@
 
 /* Landscape phones and portrait tablets */
 @media (max-width: 767px) {
+	/* Filter menu */
+	.content[data-item=push-left] {
+		position: relative !important;
+		top: 0px !important;
+	}
+	body .top-bar-push-left>.offset.with-two,
+	body .top-bar-push-left>.offset {
+		width: 0;
+	}
 	/* Catalog page */
  	.new-catalog__filters {
 	display: block !important;
@@ -705,7 +714,7 @@
 					text-decoration: none;
 					line-height: 45px;
 					vertical-align: middle;
-					font-size: 30px;
+					font-size: 24px;
 					display: inline-block;
 					&:hover,&:focus {
 						text-decoration: none;
@@ -809,6 +818,7 @@
 				text-align: center;
 				padding-left: 15px;
 				padding-right: 15px;
+				top: 25px;
 				h4 {
 					font-size: 50px;
 				}
@@ -1030,10 +1040,6 @@
 	.top-bar-push-left>.offset.with-two {
 		display: none;
 	}
-	.content[data-item=push-left] {
-		position: relative;
-		top: 0px;
-	}
 	.catalog-filter .dropdown>.my-flex {
 		width: 100%;
 	}
@@ -1097,6 +1103,9 @@
 			}
 		}
 	}
+	body .content .my-promotion.desgin-4 .advice {
+		top: 10px;
+	}
 	.content {
 		.comunication .selected-items {
 			padding: 30px 10px 10px 0px;
@@ -1118,7 +1127,7 @@
 			text-align: center;
 			& > div {
 				overflow: hidden;
-				width: auto;
+				width: 100% !important;
 			}
 			&.desgin-2{
 				&.one-column {
@@ -1127,10 +1136,10 @@
 					}
 					&>div {
 						&:nth-child(1) {
-							width: auto;
+							width: auto !important;
 						}
 						&:nth-child(2) {
-							width: auto;
+							width: auto !important;
 						}
 					}
 				}
@@ -1139,7 +1148,7 @@
 				.flex-row {
 					flex-direction: column;
 					&:nth-child(1)>div {
-						width: 100%;
+						width: 100% !important;
 					}
 				}
 			}
@@ -1171,7 +1180,7 @@
 					.my-promotion {
 						&.desgin-4  {
 							.flex-row:nth-child(1) {
-								flex-direction:column;
+								flex-direction:column !important;
 							}
 						}
 					}
@@ -1180,7 +1189,7 @@
 					.my-promotion {
 						&.desgin-4  {
 							.flex-row:nth-child(1) {
-								flex-direction:column;
+								flex-direction:column !important;
 							}
 						}
 					}
@@ -1188,8 +1197,9 @@
 			}
 		}
 		
-		.flex-reversed>div:nth-child(even) .my-promotion,.flex-reversed>div:nth-child(even) .my-promotion.desgin-4 .flex-row {
-			flex-direction: column;
+		.flex-reversed>div:nth-child(even) .my-promotion,
+		.flex-reversed>div:nth-child(even) .my-promotion.desgin-4 .flex-row {
+			flex-direction: column !important;
 		}
 		.my-item-slider .iner .title-item {
 			position: static;
